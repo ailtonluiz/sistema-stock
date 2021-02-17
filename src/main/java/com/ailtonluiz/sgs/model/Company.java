@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import java.util.List;
 
 @Entity
 @Table(name = "company")
@@ -25,11 +26,6 @@ public class Company {
     @Column(name = "company_fantasy", length = 80)
     private String companyFantasy;
 
-
-    @Column(name = "state", length = 50)
-    private String state;
-
-
     @Column(name = "phone", length = 15)
     private String phone;
 
@@ -44,6 +40,8 @@ public class Company {
 
     @Embedded
     private Address address;
+
+
 
 
 }

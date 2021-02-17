@@ -20,7 +20,7 @@ public class Address {
     private String district;
 
     @ManyToOne
-    @JoinColumn(name = "city_id", foreignKey = @ForeignKey(name = "fk_city_address"))
+    @JoinColumn(name = "city_id")
     private City city;
 
     @Transient

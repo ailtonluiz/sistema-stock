@@ -45,8 +45,6 @@ public class Product {
     @JoinColumn(name = "product_subgroup_id", foreignKey = @ForeignKey(name = "fk_product_subgroup_product"))
     private ProductSubgroup productSubgroup;
 
-    @Enumerated(EnumType.STRING)
-    private Status status;
 
 
 }

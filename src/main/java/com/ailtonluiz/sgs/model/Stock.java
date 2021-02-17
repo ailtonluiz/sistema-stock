@@ -47,5 +47,9 @@ public class Stock {
     @JoinColumn(name = "product_id", foreignKey = @ForeignKey(name = "fk_product_stock"))
     private Product product;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", length = 10)
+    private Status status;
+
 
 }

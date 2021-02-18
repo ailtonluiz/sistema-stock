@@ -26,7 +26,7 @@ public class Company {
     @Column(name = "company_fantasy", length = 80)
     private String companyFantasy;
 
-    @Column(name = "phone", length = 15)
+    @Column(name = "phone", length = 13)
     private String phone;
 
     @Column(name = "email", length = 150)
@@ -41,7 +41,10 @@ public class Company {
     @Embedded
     private Address address;
 
-
+    @ManyToMany
+    @JoinTable(name = "company_user", joinColumns = @JoinColumn(name = "company_id", foreignKey = @ForeignKey(name = "fk_company_user_company_id")),
+            inverseJoinColumns = @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "fk_company_user_user_id")))
+    private List<User> users;
 
 
 }

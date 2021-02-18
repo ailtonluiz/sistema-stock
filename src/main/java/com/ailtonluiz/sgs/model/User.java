@@ -25,7 +25,7 @@ public class User {
     @Column(length = 150)
     private String email;
 
-    @Column(length = 12)
+    @Column(length = 13)
     private String phone;
 
     private String password;
@@ -36,6 +36,9 @@ public class User {
     @Enumerated(EnumType.STRING)
     @Column(name = "status", length = 10)
     private Status status;
+
+    @ManyToMany(mappedBy = "users")
+    private List<Company> companies;
 
 
 

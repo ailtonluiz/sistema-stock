@@ -21,7 +21,7 @@ public class Client {
     @Column(length = 150)
     private String name;
 
-    @Column(length = 12)
+    @Column(length = 13)
     private String phone;
 
     private String email;

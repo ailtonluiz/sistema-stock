@@ -34,12 +34,16 @@ public class Sale {
     private String note;
 
     @ManyToOne
-    @JoinColumn(name = "client_id", foreignKey = @ForeignKey(name = "fk_cliente_sale"))
+    @JoinColumn(name = "client_id", foreignKey = @ForeignKey(name = "fk_client_sale"))
     private Client client;
 
     @ManyToOne
     @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "fk_user_sale"))
     private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "company_id", foreignKey = @ForeignKey(name = "fk_company_sale"))
+    private Company company;
 
     @Enumerated(EnumType.STRING)
     @Column(length = 12)

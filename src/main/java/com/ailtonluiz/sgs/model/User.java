@@ -3,6 +3,7 @@ package com.ailtonluiz.sgs.model;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.List;
@@ -39,7 +40,6 @@ public class User {
 
     @ManyToMany(mappedBy = "users")
     private List<Company> companies;
-
 
 
 }

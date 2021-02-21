@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/products")
 public class ProductsController {
 
+    @RequestMapping("/new")
     public ModelAndView newProduct(Product product){
         ModelAndView modelAndView = new ModelAndView("product/RegisterProduct");
 

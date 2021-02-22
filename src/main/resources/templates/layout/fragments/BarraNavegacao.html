@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+
+<body>
+<nav class="navbar  navbar-fixed-top  navbar-default  js-sticky-reference" id="main-navbar" th:fragment="navbar">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <a class="navbar-brand  hidden-xs" href="#"> <img alt="SGS" th:src="@{/images/sgs_logo.png}"/>  </a>
+
+                <ul class="nav  navbar-nav">
+                    <li>
+						<a href="#" class="js-sidebar-toggle">
+							<i class="fa  fa-bars">
+
+							</i>
+						</a>
+					</li>
+                </ul>
+            </div>
+
+            <ul class="nav navbar-nav  navbar-right">
+            	<li>
+            		<p class="navbar-text  js-tooltip" th:text="${#authentication.principal.versao}" th:ref="@{/versoes}" data-placement="bottom" title="Versión actual del sistema">Verso</p>
+            	</li>
+            	<li>
+            		<p class="navbar-text  js-tooltip" data-placement="bottom" title="Usuario conectado" th:text="${#authentication.principal.usuario.nome}">Usuário</p>
+            	</li>
+            	
+            	<li>
+            		<p class="navbar-text  js-tooltip" data-placement="bottom" title="Empresa conectada" th:text="${#authentication.principal.usuario.empresa.nome}">Empresa</p>
+            	</li>
+                <li>
+					<a class="js-tooltip" data-placement="bottom" title="Salir" th:href="@{/logout}">
+						<em class="fa  fa-sign-out">
+
+						</em>
+					</a>
+				</li>
+            </ul>
+
+        </div>
+</nav>
+</body>
+</html>
